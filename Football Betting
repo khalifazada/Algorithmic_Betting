@@ -29,8 +29,24 @@ ___
 ### Growth
 $$G={(R_s^{F_s}R_f^{F_f})}^n$$
 
+$G$ is an index that represents growth. When $G=1$ it shows that no growth has occurred. $G<1$ means there was a loss. Essentially it is just a product of all wins and losses. $R_s$, $R_f$ represent geometric averages of all succeeded and failed games respectively. The above formula originally looked like this:
+
+$$G=R_s^{nF_s}R_f^{nF_f}$$
+
+and may appear a bit more interpretative perhaps if we call $nF_s$ and $nF_f$ total number of wins and losses respectfully.
+
+	Example:
+		nF_s=3 wins
+		nF_f=1 loss
+		
+		R_s=1.09
+		R_f=0.85
+		
+		G=1.09^3*0.85=1.10
+To understand $nF_{s,f}$ we define $n$ as the total number of games played and $F_{s,f}$ as the proportion of those games being successes and failures respectfully. In the above example $n=4, F_s=\frac 34, F_f=\frac 14$
+We will construct our strategy in such a way that when *Atletico* wins and thus $3rd$ outcome occurs we recover some back at the end of the game preventing total loss.
+
 ### Geometric Averages
-$R_f$ represents a geometric average of all failed games. We will construct our strategy in such a way that when *Atletico* wins and thus $3rd$ outcome that we never placed a bet on happens $(i.e. b_3=0)$
 $$R_f={\prod_{i=0}^p {R_{f_i}}}^{\frac 1p} \text {}, R_s={\prod_{i=0}^q {R_{s_i}}}^{\frac 1q} \text {}$$
 
 ### 
