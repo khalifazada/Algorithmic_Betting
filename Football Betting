@@ -1,0 +1,42 @@
+
+Algorithmic Betting
+===
+
+### Quick Introduction
+: This document serves the purpose of being a comprehensive documentation explaining in greater and extensive detail a systematic placement of football game bets according to some chosen strategy. It accompanies the *Games Data.xlsx* file explaining how to work with it.
+
+We start with derivations of certain properties and build extensively on that. So without further ado here's an example:
+
+FC Barcelona vs Atletico Madrid is on and we decide to place bets in such manner that we reduce risk. Barcelona being arguably stronger than Atletico is our $1st$ choice. In addition to that we place a $2nd$ bet on a *draw* scenario. Let $x$ be the bet we place on Barcelona at decimal odds $b_1$ and let $y$ be the bet we place on draw at odds $b_2$. We want to place such $x$ and $y$ so that regardless of the outcome our win amount is exactly the same. This means that $x$ and $y$ must not be equal. More on this below. The implied odds $b_1, b_2$ are quoted by all major bookmakers and brokers. Thus, we define $$T=x+y$$ where $T$ is the total amount we want to risk, and equality  $$xb_1=b_2y$$ follows since we need our win to be equal regardless of the outcome. 
+
+	Example:
+		b_1=1.50		b_2=4.00
+		x=$72.73		y=$27.27
+		
+		T=x+y=$100.00
+		
+		b_1*x=$109.09
+		b_2*y=$109.09
+
+In the above example it doesn't matter if Barcelona wins or both draw our win will be the same. We only loose all of $T$ if *Atletico* wins since we havent placed any bets on this outcome (i.e. $z=0$.) Further I will talk about how to calculate at which $b_3$ what amount of $z$ to bet in order to be able to precisely calculate and control the amount of capital to recover. 
+	Our goal now is to find what $x, y$ are equal to. We observe that $xb_1=b_2(T-x)$ from the above equality and $x(b_1+b_2)=b_2T$.
+
+Thus,
+$$x=T\frac {b_2}{b_1+b_2},	y=T\frac {b_1}{b_1+b_2}$$
+
+Notice that we are free to choose $T$ in any way we please. It is simply the amount of money that we are willing to bet. For the sake of simplicity I'm a proponent of choosing $T=\$1.00$ then $x,y < 1$ and now everything can be expressed in decimals to be easily interpreted as % if necessary.
+___
+### Growth
+$$G={(R_s^{F_s}R_f^{F_f})}^n$$
+
+### Geometric Averages
+$R_f$ represents a geometric average of all failed games. We will construct our strategy in such a way that when *Atletico* wins and thus $3rd$ outcome that we never placed a bet on happens $(i.e. b_3=0)$
+$$R_f={\prod_{i=0}^p {R_{f_i}}}^{\frac 1p} \text {}, R_s={\prod_{i=0}^q {R_{s_i}}}^{\frac 1q} \text {}$$
+
+### 
+$$F_s=\frac q{p+q}, F_f=\frac p{p+q}$$
+___
+
+
+
+> Written with [StackEdit](https://stackedit.io/)
